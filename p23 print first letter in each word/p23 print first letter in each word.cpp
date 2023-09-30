@@ -14,15 +14,20 @@ string readString()
 
 void printFirstLetterInEachWord(string str)// gomaa el  sherbini
 {
-	//cout <<"First letter: "<< str[0] << endl;
+	bool isFirstLetter = true;
 	for (int i = 0; i < str.length(); i++)
 	{
-		if(i==0 && str[i]!=' ')
-			cout << str[i] << endl;
+		/*if(i==0 && str[i]!=' ')
+			cout << str[i];
 		else if (str[i] == ' '&& str[i+1]!=' ')
-			cout << str[i+1] << endl;
+			cout << str[i+1];*/
+
+		if (str[i] != ' ' && isFirstLetter)
+		{
+			cout << str[i] << endl;
+		}
+		isFirstLetter = (str[i] == ' ') ? true : false;
 	}
-	cout << endl;
 }
 
 int main()
