@@ -12,13 +12,15 @@ string readString()
 	return myString;
 }
 
-void printFirstLetterInEachWord(string str)//gomaa el sherbini
+void printFirstLetterInEachWord(string str)// gomaa el  sherbini
 {
-	cout << str[0] << endl;
+	//cout <<"First letter: "<< str[0] << endl;
 	for (int i = 0; i < str.length(); i++)
 	{
-		if(str[i] == ' ')
-		cout << str[i+1] << endl;
+		if(i==0 && str[i]!=' ')
+			cout << str[i] << endl;
+		else if (str[i] == ' '&& str[i+1]!=' ')
+			cout << str[i+1] << endl;
 	}
 	cout << endl;
 }
